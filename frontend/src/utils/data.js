@@ -1,4 +1,4 @@
-import {BarChart2,FileText,Mail,Sparkles} from 'lucide-react'
+import {BarChart2,FileText,Mail,Sparkles,Plus,Users,LayoutDashboard} from 'lucide-react'
 export const FEATURES = [
     {
         icon:Sparkles,
@@ -56,4 +56,13 @@ export const FAQS=[
         question:"Is there a free trail available ?",
         answer:"Yes,we offer a 14-day free trial so you can explore all the features and see how our app can benefit your business."
     }
+]
+
+
+export const NAVIGATION_MENU=[
+    {id:"dashboard",name:"Dashboard",icon:LayoutDashboard},
+    {id:"invoices",name:"Invoices",icon:FileText},
+    {id:"invoices/new",name:"Create Invoice",icon:Plus},
+    {id:"profile",name:"profile",icon:Users},
+    
 ]

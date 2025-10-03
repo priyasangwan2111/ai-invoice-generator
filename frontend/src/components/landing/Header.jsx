@@ -3,17 +3,18 @@ import { useNavigate } from "react-router-dom";
 
 import{ Link } from 'react-router-dom'
 import {FileText,Menu,X} from 'lucide-react'
-import React from 'react'
+import {useAuth} from '../context/AuthContext'
 import ProfileDropdown from '../layout/ProfileDropdown'
 import Button from '../ui/Button'
 const Header = () => {
     const [isScrolled,setIsScrolled]=useState(false);
     const [isMenuOpen,setIsMenuOpen]=useState(false);
-     const[profileDropdownOpen,setProfileDropdownOpen]=useState(false)
-    const isAuthenticated=false;
-    const user={name:"Priya",email:"priyasangwan2111@gmail.com"}
-    const logout=()=>{}
+
+    
+    const {isAuthenticated,user,logout}=useAuth();
+   
     const navigate=useNavigate();
+     const[profileDropdownOpen,setProfileDropdownOpen]=useState(false)
     useEffect(()=>{
             const handleScroll=()=>{
                 setIsScrolled(window.scrollY>10)
